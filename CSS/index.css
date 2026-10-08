@@ -1,0 +1,484 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+body{
+    background-color: black !important;
+}
+.logo{
+    width: 150px;
+    height: 60px;
+}
+.search{
+    width:700px !important;
+}
+.downn{
+  display: inline-block;
+    transition: all 0.5s;
+}
+
+.product:hover .downn{
+  transform: rotate(180deg);
+    cursor: pointer;
+}
+
+.contentimg img{
+    width: 26px;
+    height: 26px;
+    padding: 3px;
+    box-shadow: 2px 2px 8px rgb(163, 163, 163);
+
+}
+/* .movingContent{
+    border-top: 1px solid greenyellow;
+    border-bottom: 1px solid greenyellow;
+
+} */
+
+
+.bl-ticker {
+    background: #070707;
+    border-top: 1px solid rgba(210, 254, 40, 0.45);
+    border-bottom: 1px solid rgba(210, 254, 40, 0.45);
+    overflow: hidden;
+    padding: 9px 0;
+}
+
+  .bl-ticker {
+    background: #070707;
+    border-top: 1px solid rgba(210, 254, 40, 0.45);
+    border-bottom: 1px solid rgba(210, 254, 40, 0.45);
+    overflow: hidden;
+    padding: 9px 0;
+  }
+
+  .bl-ticker-track {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    width: max-content;
+    animation: bl-tscroll 24s linear infinite;
+  }
+
+  .bl-ticker-track:hover {
+    animation-play-state: paused;
+  }
+
+  @keyframes bl-tscroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+
+  .bl-ti {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    white-space: nowrap;
+    font-size: 12.5px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: #ffffff;
+    text-transform: capitalize;
+  }
+
+  .bl-ti-icon {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: rgba(210, 254, 40, 0.13);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    flex-shrink: 0;
+  }
+
+  .bl-tdiv {
+    width: 1px;
+    height: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    flex-shrink: 0;
+  }
+
+  .parent{
+    width: 100%;
+    border-top: 1px solid yellowgreen;
+    border-bottom: 1px solid yellowgreen;
+  }
+
+  .displayProcucts{
+    margin-top: 30px;
+    list-style: none;
+    overflow: hidden;
+    width: 90%;
+
+  }
+  .displayProcucts li{
+    width: 300px;
+    /* height: 300px; */
+  border-radius:  14px;
+
+
+  }
+  .displayProcucts li a{
+    text-decoration: none;
+    text-align: center;
+  }
+
+  .displayProcucts li a img{
+    width: 100px;
+    height: 100px;
+      border-radius:  14px;
+
+  }
+  .displayProcucts li a p{
+        color: white;
+        font-size: 12px;
+
+  }
+
+  .parentProduct{
+    width: 100%;
+  }
+
+  /* =========================================
+   BESTSELLERS SECTION
+========================================= */
+
+.bestseller-section {
+    background-color: #000;
+    padding: 55px 30px 50px;
+    color: white;
+}
+
+
+/* Heading */
+
+.bestseller-title {
+    text-align: center;
+    font-size: 58px;
+    font-weight: 900;
+    letter-spacing: -2px;
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.bestseller-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.bs-btn {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 30px;
+    padding: 10px 27px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.bs-btn.active {
+    background-color: #baff00;
+    color: black;
+    border-color: #baff00;
+    font-weight: 600;
+}
+
+.bs-btn:hover {
+    background-color: #baff00;
+    color: black;
+    border-color: #baff00;
+}
+
+
+/* =========================================
+   PRODUCT GRID
+========================================= */
+
+.bestseller-products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    max-width: 1620px;
+    margin: auto;
+}
+
+
+/* =========================================
+   PRODUCT CARD
+========================================= */
+
+.bs-card {
+    background-color: white;
+    color: black;
+    border-radius: 15px 15px 0 0;
+    overflow: hidden;
+    min-width: 0;
+}
+
+
+/* Rating */
+
+.bs-rating {
+    height: 40px;
+    padding: 10px 17px 5px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.bs-rating span {
+    color: green;
+    font-size: 18px;
+}
+
+
+/* =========================================
+   PRODUCT IMAGE
+========================================= */
+
+.bs-image-wrap {
+    position: relative;
+    height: 355px;
+    background-color: #f5f5f5;
+    overflow: hidden;
+}
+
+.bs-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    inset: 0;
+    transition: opacity 0.25s ease;
+}
+
+.bs-image-hover {
+    opacity: 0;
+}
+
+.bs-image-wrap:hover .bs-image-main {
+    opacity: 0;
+}
+
+.bs-image-wrap:hover .bs-image-hover {
+    opacity: 1;
+}
+
+
+/* =========================================
+   FLAVOUR
+========================================= */
+
+.bs-flavour {
+    text-align: center;
+    border-top: 1px solid #eeeeee;
+    padding: 5px 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   PRODUCT NAME
+========================================= */
+
+.bs-name {
+    font-size: 20px;
+    line-height: 1.4;
+    font-weight: 500;
+    padding: 7px 13px;
+    min-height: 90px;
+}
+
+
+/* =========================================
+   PRICE
+========================================= */
+
+.bs-price {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 5px 13px 15px;
+}
+
+.bs-price strong {
+    font-size: 24px;
+}
+
+.bs-price del {
+    color: #aaa;
+    font-size: 16px;
+}
+
+.bs-price span {
+    background-color: #df4e38;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.bs-cart {
+    display: block;
+    margin: 0 13px 16px;
+    padding: 11px 16px;
+    background-color: #39a935;
+    color: white;
+    border-radius: 6px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+.bs-cart:hover {
+    background-color: #2d8629;
+    color: white;
+}
+
+.View-All{
+    align-items: center;
+    background-color: #baff00;
+    margin: 20px auto;
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .bestseller-products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .container-fluid > .d-flex:first-child {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .logo {
+        margin-left: 0 !important;
+    }
+
+    .container-fluid > .d-flex:first-child > div:nth-child(2) {
+        width: 100%;
+    }
+
+    .search {
+        width: 100% !important;
+        max-width: 100%;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+        gap: 2px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .container-fluid > .d-flex:first-child {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .logo {
+        margin-left: 0 !important;
+    }
+
+    .container-fluid > .d-flex:first-child > div:nth-child(2) {
+        width: 100%;
+    }
+
+    .search {
+        width: 100% !important;
+        max-width: 100%;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+        gap: 2px;
+    }
+
+    .nav-link {
+        padding: 6px 8px;
+        font-size: 14px;
+    }
+
+    .productDisplaychild {
+        width: 100%;
+    }
+
+    .displayProcucts {
+        width: 100%;
+        justify-content: flex-start !important;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding: 0 12px;
+    }
+
+    .displayProcucts li {
+        flex: 0 0 140px;
+        width: 140px;
+        height: 170px;
+    }
+
+    .bestseller-section {
+        padding: 40px 12px;
+    }
+
+    .bestseller-title {
+        font-size: 40px;
+    }
+
+    .bestseller-buttons {
+        flex-wrap: wrap;
+    }
+
+    .bs-btn {
+        padding: 8px 20px;
+    }
+
+    .bestseller-products {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .bs-image {
+        height: 350px;
+    }
+
+    .bs-image-wrap {
+        height: 350px;
+    }
+
+}
